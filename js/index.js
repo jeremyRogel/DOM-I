@@ -40,3 +40,75 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//nav bar
+let anchors = document.querySelectorAll("nav a");
+anchors.forEach(
+  (item, index) => (item.textContent = siteContent["nav"][`nav-item-${index + 1}`])
+);
+//title
+let title = document.querySelector(".cta-text h1");
+title.textContent = siteContent["cta"]["h1"];
+
+//button
+let button = document.querySelector(".cta-text button");
+button.textContent = siteContent["cta"]["button"];
+
+//top image
+let topImage = document.querySelector("#cta-img");
+topImage.src = siteContent["cta"]["img-src"];
+
+//features
+let featuresTitle = document.querySelector(".top-content .text-content h4");
+featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+
+let featuresBody = document.querySelector(".top-content .text-content p");
+featuresBody.textContent = siteContent["main-content"]["features-content"];
+//about
+let aboutTitle = document.querySelector(".top-content .text-content:last-child h4");
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+
+let aboutBody = document.querySelector(".top-content .text-content:last-child p");
+aboutBody.textContent = siteContent["main-content"]["about-content"];
+
+//middle image
+let middleImage = document.querySelector("#middle-img");
+middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+//services
+let servicesTitle = document.querySelector(".bottom-content .text-content h4");
+servicesTitle.textContent = siteContent["main-content"]["services-h4"];
+
+let servicesBody = document.querySelector(".bottom-content .text-content p");
+servicesBody.textContent = siteContent["main-content"]["services-content"];
+
+//product
+let productTitle = document.querySelector(".bottom-content .text-content:nth-child(2) h4");
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+
+let productBody = document.querySelector(".bottom-content .text-content:nth-child(2) p");
+productBody.textContent = siteContent["main-content"]["product-content"];
+
+//vision
+let visionTitle = document.querySelector(".bottom-content .text-content:last-child h4");
+visionTitle.textContent = siteContent["main-content"]["vision-h4"];
+
+let visionBody = document.querySelector(".bottom-content .text-content:last-child p");
+visionBody.textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+let contactTitle = document.querySelector(".contact h4");
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+//contact address
+let contactPTags = document.querySelectorAll(".contact p");
+contactPTags[0].textContent = siteContent["contact"]["address"];
+
+contactPTags[1].textContent = siteContent["contact"]["phone"];
+
+contactPTags[2].textContent = siteContent["contact"]["email"];
+
+
+//footer
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
